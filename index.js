@@ -3,18 +3,20 @@
 // https://my.learn.co/courses/650/assignments/32968?module_item_id=83194
 
 // sample
-const record = [
-    { year: "2015", result: "W"},
-    { year: "2014", result: "N/A"},
-    { year: "2013", result: "L"},
-  ];
+// const record = [
+//     { year: "2015", result: "W"},
+//     { year: "2014", result: "N/A"},
+//     { year: "2013", result: "L"},
+//   ];
 
-function isWin(year) {
-    return year.result === "L";
+function isWin(element) { // cb: true or false
+    return element.result === "W";
 }
 
 function superbowlWin(array) {
-    return array.find(isWin)
+    const winYear = array.find(isWin);
+    return winYear === undefined ? winYear : winYear.year;
 }
 
-console.log(superbowlWin(record));
+// testing 
+// console.log(superbowlWin(record));
